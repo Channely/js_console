@@ -22,7 +22,7 @@
 </head>
 <body>
 <button class="btn btn-info btn-large btn-block">JS console</button>
-<input class="form-control" type="text" id="target" placeholder="code here . . .">
+<input class="form-control" type="text" id="target" autofocus="true" placeholder="Code here, Enter to run . . .">
 <div id="bind"></div>
 <script>
     console.log = function (arg) {
@@ -83,6 +83,7 @@
             if(curKey == 13)
             {
                 run($("#target").val());
+		$("#target").val("");
             }
         });
     });
